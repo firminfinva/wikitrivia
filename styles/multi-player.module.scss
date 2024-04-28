@@ -1,0 +1,30 @@
+@import "./variables";
+
+.mutliplayer {
+  width: 40vw;
+  height: 50vh;
+  border: 1px solid $background-alt;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 25vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+  div {
+    width: 100%;
+    display: flex;
+    gap: 2%;
+
+    input {
+      height: 50px;
+      width: 100%;
+    }
+  }
+
+  button {
+    height: 30px;
+    width: 50px;
+  }
+}

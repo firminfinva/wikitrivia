@@ -7,10 +7,11 @@ import Score from "./score";
 interface Props {
   highscore: number;
   start: () => void;
+  startMultiPlayer: () => void;
 }
 
 export default function Instructions(props: Props) {
-  const { highscore, start } = props;
+  const { highscore, start, startMultiPlayer } = props;
 
   return (
     <div className={styles.instructions}>
@@ -21,7 +22,11 @@ export default function Instructions(props: Props) {
             <Score score={highscore} title="Best streak" />
           </div>
         )}
-        <Button onClick={start} text="Start game" />
+        <div>
+          <Button onClick={start} text="Start game" />
+          <Button onClick={startMultiPlayer} text="Multi Player" />
+        </div>
+
         <div className={styles.about}>
           <div>
             All data sourced from{" "}
